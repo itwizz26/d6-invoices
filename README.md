@@ -22,7 +22,7 @@ Technologies used.
 
 ## How to set up the project
 
-After cloning the repository, change into the directory you've just created. Run these commands:
+After cloning the repository (https://github.com/itwizz26/d6-invoices), change into the directory you've just created. Run these commands:
 
 Install all app dependencies.
 
