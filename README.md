@@ -36,9 +36,17 @@ Import the sql dump inside the below directory to create the database and tables
 
 **./databases/sql**
 
-Generate auth passport keys
+Now generate a .env file out of the .env.example file.
+
+**cp .env.example .env**
+
+Update the credentials in the DB_* section of your new .env file to match your own server details.
+
+## Generate auth passport keys
 
 **php artisan key:generate**
+
+## Run application
 
 Start the application and open the system in your browser to generate your invoices.
 
