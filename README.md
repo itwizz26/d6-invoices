@@ -24,8 +24,8 @@ Install all app dependencies.
 
 ## Databases
 
-
-**php artisan migrate**
+Import the sql dump inside the below directory to create the database and tables. 
+**./databases/sql**
 
 Generate auth passport keys
 
