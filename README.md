@@ -14,6 +14,7 @@ and store it in a database.
 
 Technologies used.
 - PHP 7+
+- MySQL 8
 - Laravel 8
 - Bootstrap 5
 - Custom jQuery / JavaScript
