@@ -12,6 +12,13 @@
 We'd like to build a UI and API that allows a user to capture invoices as shown,
 and store it in a database.
 
+Technologies used.
+- PHP 7+
+- Laravel 8
+- Bootstrap 5
+- Custom jQuery / JavaScript
+- Datatables
+
 ## How to set up the project
 
 After cloning the repository, change into the directory you've just created. Run these commands:
@@ -22,16 +29,17 @@ Install all app dependencies.
 
 **npm install**
 
-## Databases
+## Database and tables
 
-Import the sql dump inside the below directory to create the database and tables. 
+Import the sql dump inside the below directory to create the database and tables.
+
 **./databases/sql**
 
 Generate auth passport keys
 
 **php artisan key:generate**
 
-Start the application.
+Start the application and open the system in your browser to generate your invoices.
 
 **php artisan serve**
 
