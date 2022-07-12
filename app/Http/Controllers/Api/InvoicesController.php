@@ -41,9 +41,19 @@ class InvoicesController extends Controller
                     $items[$key] = $value;
                 }
             }
+
+            $invoice_exists = $invoice_data = DB::select('select * from invoices where items = ?;', [
+                json_encode($items)
+            ]);
+            if (!empty($invoice_exists)) {
+                return view('error', [
+                    'error' => 'It seems you are trying to generate an already existing invoice?',
+                ]);
+            }
             DB::insert('insert into `invoices` (items) values (?);', [
                 json_encode($items)
             ]);
+
             $id = DB::select('select id from `invoices` order by id desc limit 1;');
             $invoice_id = $id[0]->id;
             DB::insert('insert into `customers` (invoice_id, billing_name, company_name,

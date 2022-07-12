@@ -20,7 +20,7 @@ $(document).ready(function(){
         },
         "Please enter only letters, numbers, and spaces!");
         $.validator.addMethod("alphachars", function(value, element) {
-            return this.optional(element) || /^[\w ,.:()]+$/i.test(value);
+            return this.optional(element) || /^[\w ,.:#()]+$/i.test(value);
         },
         "Allowed characters are , . : ( )");
         $("#pdf-previewer").validate({

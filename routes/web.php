@@ -17,6 +17,9 @@ use App\Http\Controllers\Api\InvoicesController;
 Route::get('/', function () {
     return view('invoice');
 });
+Route::get('/error', function () {
+    return view('error');
+});
 // The preview page
 Route::post('/invoices/preview', [InvoicesController::class, 'store'])->name('preview');
 // The PDF generator
