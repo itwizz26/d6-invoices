@@ -47,7 +47,8 @@ class InvoicesController extends Controller
             ]);
             if (!empty($invoice_exists)) {
                 return view('error', [
-                    'error' => 'It seems you are trying to generate an already existing invoice?',
+                    'status' => 401,
+                    'message' => 'It seems you are trying to generate an already existing invoice?',
                 ]);
             }
             DB::insert('insert into `invoices` (items) values (?);', [
